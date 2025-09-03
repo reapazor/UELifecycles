@@ -13,13 +13,13 @@ ULActorComponent::ULActorComponent()
 
 void ULActorComponent::BeginDestroy()
 {
-	FLUtils::Log(TEXT("ULActorComponent"), TEXT("BeginDestroy"));
+	FLUtils::Log(TEXT("UActorComponent"), TEXT("BeginDestroy"));
 	Super::BeginDestroy();
 }
 
 void ULActorComponent::BeginPlay()
 {
-	FLUtils::Log(TEXT("ULActorComponent"), TEXT("BeginPlay"));
+	FLUtils::Log(TEXT("UActorComponent"), TEXT("BeginPlay"));
 	Super::BeginPlay();
 }
 
@@ -28,7 +28,7 @@ void ULActorComponent::TickComponent(float DeltaTime, ELevelTick TickType,
 {
 	if (!bTicked)
 	{
-		FLUtils::Log(TEXT("ULActorComponent"), TEXT("TickComponent"));
+		FLUtils::Log(TEXT("UActorComponent"), TEXT("TickComponent"));
 		bTicked = true;
 	}
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
@@ -36,30 +36,30 @@ void ULActorComponent::TickComponent(float DeltaTime, ELevelTick TickType,
 
 void ULActorComponent::InitializeComponent()
 {
-	FLUtils::Log(TEXT("ULActorComponent"), TEXT("InitializeComponent"));
+	FLUtils::Log(TEXT("UActorComponent"), TEXT("InitializeComponent"));
 	Super::InitializeComponent();
 }
 
 void ULActorComponent::Deactivate()
 {
-	FLUtils::Log(TEXT("ULActorComponent"), TEXT("Deactivate"));
+	FLUtils::Log(TEXT("UActorComponent"), TEXT("Deactivate"));
 	Super::Deactivate();
 }
 
 void ULActorComponent::Activate(bool bReset)
 {
-	FLUtils::Log(TEXT("ULActorComponent"), TEXT("Activate"));
+	FLUtils::Log(TEXT("UActorComponent"), TEXT("Activate"));
 	Super::Activate(bReset);
 }
 
 void ULActorComponent::OnRegister()
 {
-	FLUtils::Log(TEXT("ULActorComponent"), TEXT("OnRegister"));
+	FLUtils::Log(TEXT("UActorComponent"), TEXT("OnRegister"));
 	Super::OnRegister();
 }
 
 void ULActorComponent::OnUnregister()
 {
-	FLUtils::Log(TEXT("ULActorComponent"), TEXT("OnUnregister"));
+	FLUtils::Log(TEXT("UActorComponent"), TEXT("OnUnregister"));
 	Super::OnUnregister();
 }
