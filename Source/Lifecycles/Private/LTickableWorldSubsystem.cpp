@@ -6,43 +6,43 @@
 
 void ULTickableWorldSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 {
-	FLUtils::Log(TEXT("TickableWorldSubsystem"), TEXT("Initialize"));
+	FLUtils::Log(TEXT("UTickableWorldSubsystem"), TEXT("Initialize"));
 	Super::Initialize(Collection);
 }
 
 void ULTickableWorldSubsystem::Deinitialize()
 {
-	FLUtils::Log(TEXT("TickableWorldSubsystem"), TEXT("Deinitialize"));
+	FLUtils::Log(TEXT("UTickableWorldSubsystem"), TEXT("Deinitialize"));
 	Super::Deinitialize();
 }
 
 void ULTickableWorldSubsystem::PostInitialize()
 {
-	FLUtils::Log(TEXT("TickableWorldSubsystem"), TEXT("PostInitialize"));
+	FLUtils::Log(TEXT("UTickableWorldSubsystem"), TEXT("PostInitialize"));
 	Super::PostInitialize();
 }
 
 void ULTickableWorldSubsystem::BeginDestroy()
 {
-	FLUtils::Log(TEXT("TickableWorldSubsystem"), TEXT("BeginDestroy"));
+	FLUtils::Log(TEXT("UTickableWorldSubsystem"), TEXT("BeginDestroy"));
 	Super::BeginDestroy();
 }
 
 void ULTickableWorldSubsystem::OnWorldBeginPlay(UWorld& InWorld)
 {
-	FLUtils::Log(TEXT("TickableWorldSubsystem"), TEXT("OnWorldBeginPlay"));
+	FLUtils::Log(TEXT("UTickableWorldSubsystem"), TEXT("OnWorldBeginPlay"));
 	Super::OnWorldBeginPlay(InWorld);
 }
 
 void ULTickableWorldSubsystem::OnWorldComponentsUpdated(UWorld& World)
 {
-	FLUtils::Log(TEXT("TickableWorldSubsystem"), TEXT("OnWorldComponentsUpdated"));
+	FLUtils::Log(TEXT("UTickableWorldSubsystem"), TEXT("OnWorldComponentsUpdated"));
 	Super::OnWorldComponentsUpdated(World);
 }
 
 bool ULTickableWorldSubsystem::ShouldCreateSubsystem(UObject* Outer) const
 {
-	FLUtils::Log(TEXT("TickableWorldSubsystem"), TEXT("ShouldCreateSubsystem"));
+	FLUtils::Log(TEXT("UTickableWorldSubsystem"), TEXT("ShouldCreateSubsystem"));
 	return Super::ShouldCreateSubsystem(Outer);
 }
 
@@ -50,7 +50,7 @@ void ULTickableWorldSubsystem::Tick(float DeltaTime)
 {
 	if (!bTicked)
 	{
-		FLUtils::Log(TEXT("TickableWorldSubsystem"), TEXT("Tick"));
+		FLUtils::Log(TEXT("UTickableWorldSubsystem"), TEXT("Tick"));
 		bTicked = true;
 	}
 	Super::Tick(DeltaTime);

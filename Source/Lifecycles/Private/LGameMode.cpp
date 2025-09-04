@@ -22,25 +22,25 @@ ALGameMode::ALGameMode(const FObjectInitializer& ObjectInitializer) : Super(Obje
 
 void ALGameMode::InitGame(const FString& MapName, const FString& Options, FString& ErrorMessage)
 {
-	FLUtils::Log(TEXT("GameMode"), TEXT("InitGame"));
+	FLUtils::Log(TEXT("AGameMode"), TEXT("InitGame"));
 	Super::InitGame(MapName, Options, ErrorMessage);
 }
 
 void ALGameMode::InitGameState()
 {
-	FLUtils::Log(TEXT("GameMode"), TEXT("InitGameState"));
+	FLUtils::Log(TEXT("AGameMode"), TEXT("InitGameState"));
 	Super::InitGameState();
 }
 
 void ALGameMode::BeginPlay()
 {
-	FLUtils::Log(TEXT("GameMode"), TEXT("BeginPlay"));
+	FLUtils::Log(TEXT("AGameMode"), TEXT("BeginPlay"));
 	Super::BeginPlay();
 }
 
 void ALGameMode::EndPlay(const EEndPlayReason::Type EndPlayReason)
 {
-	FLUtils::Log(TEXT("GameMode"), TEXT("EndPlay"));
+	FLUtils::Log(TEXT("AGameMode"), TEXT("EndPlay"));
 	Super::EndPlay(EndPlayReason);
 }
 
@@ -48,7 +48,7 @@ void ALGameMode::Tick(float DeltaTime)
 {
 	if (!bTicked)
 	{
-		FLUtils::Log(TEXT("GameMode"), TEXT("Tick"));
+		FLUtils::Log(TEXT("AGameMode"), TEXT("Tick"));
 		bTicked = true;
 	}
 	Super::Tick(DeltaTime);
@@ -56,12 +56,12 @@ void ALGameMode::Tick(float DeltaTime)
 
 void ALGameMode::PostInitializeComponents()
 {
-	FLUtils::Log(TEXT("GameMode"), TEXT("PostInitializeComponents"));
+	FLUtils::Log(TEXT("AGameMode"), TEXT("PostInitializeComponents"));
 	Super::PostInitializeComponents();
 }
 
 void ALGameMode::PostLogin(APlayerController* NewPlayer)
 {
-	FLUtils::Log(TEXT("GameMode"), TEXT("PostLogin"));
+	FLUtils::Log(TEXT("AGameMode"), TEXT("PostLogin"));
 	Super::PostLogin(NewPlayer);
 }

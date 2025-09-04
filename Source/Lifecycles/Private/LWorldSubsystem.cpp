@@ -6,42 +6,42 @@
 
 void ULWorldSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 {
-	FLUtils::Log(TEXT("WorldSubsystem"), TEXT("Initialize"));
+	FLUtils::Log(TEXT("UWorldSubsystem"), TEXT("Initialize"));
 	Super::Initialize(Collection);
 }
 
 void ULWorldSubsystem::Deinitialize()
 {
-	FLUtils::Log(TEXT("WorldSubsystem"), TEXT("Deinitialize"));
+	FLUtils::Log(TEXT("UWorldSubsystem"), TEXT("Deinitialize"));
 	Super::Deinitialize();
 }
 
 void ULWorldSubsystem::PostInitialize()
 {
-	FLUtils::Log(TEXT("WorldSubsystem"), TEXT("PostInitialize"));
+	FLUtils::Log(TEXT("UWorldSubsystem"), TEXT("PostInitialize"));
 	Super::PostInitialize();
 }
 
 void ULWorldSubsystem::BeginDestroy()
 {
-	FLUtils::Log(TEXT("WorldSubsystem"), TEXT("BeginDestroy"));
+	FLUtils::Log(TEXT("UWorldSubsystem"), TEXT("BeginDestroy"));
 	Super::BeginDestroy();
 }
 
 void ULWorldSubsystem::OnWorldBeginPlay(UWorld& InWorld)
 {
-	FLUtils::Log(TEXT("WorldSubsystem"), TEXT("OnWorldBeginPlay"));
+	FLUtils::Log(TEXT("UWorldSubsystem"), TEXT("OnWorldBeginPlay"));
 	Super::OnWorldBeginPlay(InWorld);
 }
 
 void ULWorldSubsystem::OnWorldComponentsUpdated(UWorld& World)
 {
-	FLUtils::Log(TEXT("WorldSubsystem"), TEXT("OnWorldComponentsUpdated"));
+	FLUtils::Log(TEXT("UWorldSubsystem"), TEXT("OnWorldComponentsUpdated"));
 	Super::OnWorldComponentsUpdated(World);
 }
 
 bool ULWorldSubsystem::ShouldCreateSubsystem(UObject* Outer) const
 {
-	FLUtils::Log(TEXT("WorldSubsystem"), TEXT("ShouldCreateSubsystem"));
+	FLUtils::Log(TEXT("UWorldSubsystem"), TEXT("ShouldCreateSubsystem"));
 	return Super::ShouldCreateSubsystem(Outer);
 }
