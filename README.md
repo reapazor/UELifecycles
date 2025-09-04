@@ -1,5 +1,12 @@
 A super quick little project to validate the lifecycle events in Unreal Engine.
 
+## Notes
+
+- Extends `AGameMode` (not `AGameModeBase`), so some behaviour might be slightly different based on your own setup.
+- `APlayerState` gets duplicated on tear down when the player is recreated as inactive, thus you see it post EndPIE being created.
+  
+## Flow
+
 ```
 (20) -=-=-=-=-=- BeginPIE -=-=-=-=-=-
 (21) UWorldSubsystem::ShouldCreateSubsystem
