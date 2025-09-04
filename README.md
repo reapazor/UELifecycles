@@ -7,8 +7,8 @@ A super quick little project to validate the lifecycle events in Unreal Engine.
   
 ## Flow
 
+### Begin PIE
 ```
-(20) -=-=-=-=-=- BeginPIE -=-=-=-=-=-
 (21) UWorldSubsystem::ShouldCreateSubsystem
 (22) UWorldSubsystem::Initialize
 (23) UTickableWorldSubsystem::ShouldCreateSubsystem
@@ -55,7 +55,9 @@ A super quick little project to validate the lifecycle events in Unreal Engine.
 (64) UTickableWorldSubsystem::Tick
 (65) UGameViewportClient::Tick
 (66) AHUD::DrawHUD
-(67) -=-=-=-=-=- EndPIE -=-=-=-=-=-
+```
+### End PIE
+```
 (68) APlayerState::PostInitializeComponents
 (69) APlayerState::BeginPlay
 (70) APlayerState::Destroyed
