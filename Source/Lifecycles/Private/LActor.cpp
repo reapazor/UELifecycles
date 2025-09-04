@@ -16,27 +16,33 @@ ALActor::ALActor()
 
 void ALActor::BeginPlay()
 {
-	FLUtils::Log(TEXT("Actor"), TEXT("BeginPlay"));
+	FLUtils::Log(TEXT("AActor"), TEXT("BeginPlay"));
 	Super::BeginPlay();
 }
 
 void ALActor::EndPlay(const EEndPlayReason::Type EndPlayReason)
 {
-	FLUtils::Log(TEXT("Actor"), TEXT("EndPlay"));
+	FLUtils::Log(TEXT("AActor"), TEXT("EndPlay"));
 	Super::EndPlay(EndPlayReason);
 }
 
 void ALActor::PostInitializeComponents()
 {
-	FLUtils::Log(TEXT("Actor"), TEXT("PostInitializeComponents"));
+	FLUtils::Log(TEXT("AActor"), TEXT("PostInitializeComponents"));
 	Super::PostInitializeComponents();
+}
+
+void ALActor::PostActorCreated()
+{
+	FLUtils::Log(TEXT("AActor"), TEXT("PostActorCreated"));
+	Super::PostActorCreated();
 }
 
 void ALActor::Tick(float DeltaTime)
 {
 	if (!bTicked)
 	{
-		FLUtils::Log(TEXT("Actor"), TEXT("Tick"));
+		FLUtils::Log(TEXT("AActor"), TEXT("Tick"));
 		bTicked = true;
 	}
 	

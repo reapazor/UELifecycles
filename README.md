@@ -20,7 +20,7 @@ A super quick little project to validate the lifecycle events in Unreal Engine.
 (42) AGameMode::InitGameState
 (43) AGameState::ReceivedGameModeClass
 (44) UActorComponent::Activate
-(45) Actor::PostInitializeComponents
+(45) AActor::PostInitializeComponents
 (46) AGameMode::PostInitializeComponents
 (47) APlayerController::PostInitializeComponents
 (48) APlayerState::PostInitializeComponents
