@@ -4,25 +4,18 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
-#include "LActor.generated.h"
+#include "GameFramework/DefaultPawn.h"
+#include "LPawn.generated.h"
 
-class ULActorComponent;
 
-UCLASS(BlueprintType)
-class LIFECYCLES_API ALActor : public AActor
+UCLASS(Config = Game)
+class LIFECYCLES_API ALPawn : public ADefaultPawn
 {
 	GENERATED_BODY()
 	
-public:
-	ALActor();
-	virtual void Tick(float DeltaTime) override;
-	
-	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = "Components")
-	ULActorComponent* ActorComponent;
-protected:
 	virtual void BeginPlay() override;
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
+	virtual void Tick(float DeltaTime) override;
 	virtual void PostInitializeComponents() override;
 
 private:

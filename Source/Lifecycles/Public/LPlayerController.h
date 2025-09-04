@@ -4,26 +4,20 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
-#include "LActor.generated.h"
+#include "GameFramework/PlayerController.h"
+#include "LPlayerController.generated.h"
 
-class ULActorComponent;
-
-UCLASS(BlueprintType)
-class LIFECYCLES_API ALActor : public AActor
+UCLASS(Config = Game)
+class LIFECYCLES_API ALPlayerController : public APlayerController
 {
 	GENERATED_BODY()
 	
-public:
-	ALActor();
-	virtual void Tick(float DeltaTime) override;
-	
-	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = "Components")
-	ULActorComponent* ActorComponent;
-protected:
 	virtual void BeginPlay() override;
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
+	virtual void Tick(float DeltaTime) override;
 	virtual void PostInitializeComponents() override;
+	virtual void BeginPlayingState() override;
+	virtual void EndPlayingState() override;
 
 private:
 	bool bTicked = false;

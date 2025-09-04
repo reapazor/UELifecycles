@@ -2,8 +2,23 @@
 // Do whatever you want with it, very unlikely it's actually useful to anyone!
 
 #include "LGameMode.h"
-
+#include "LGameSession.h"
+#include "LGameState.h"
+#include "LHUD.h"
+#include "LPawn.h"
+#include "LPlayerController.h"
+#include "LPlayerState.h"
 #include "LUtils.h"
+
+ALGameMode::ALGameMode(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
+{
+	GameStateClass = ALGameState::StaticClass();
+	GameSessionClass = ALGameSession::StaticClass();
+	PlayerControllerClass = ALPlayerController::StaticClass();
+	PlayerStateClass = ALPlayerState::StaticClass();
+	DefaultPawnClass = ALPawn::StaticClass();
+	HUDClass = ALHUD::StaticClass();
+}
 
 void ALGameMode::InitGame(const FString& MapName, const FString& Options, FString& ErrorMessage)
 {

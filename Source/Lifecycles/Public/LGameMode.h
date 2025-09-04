@@ -12,6 +12,8 @@ class LIFECYCLES_API ALGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
 
+	explicit ALGameMode(const FObjectInitializer& ObjectInitializer);
+	
 	virtual void InitGame(const FString& MapName, const FString& Options, FString& ErrorMessage) override;
 	virtual void InitGameState() override;
 	virtual void BeginPlay() override;

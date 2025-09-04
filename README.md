@@ -1,35 +1,49 @@
 A super quick little project to validate the lifecycle events in Unreal Engine.
 
 ```
-Log          LogLifecycle              [LIFECYCLE] (25) -=-=-=-=-=- BeginPIE -=-=-=-=-=-
-Log          LogLifecycle              [LIFECYCLE] (26) WorldSubsystem::ShouldCreateSubsystem
-Log          LogLifecycle              [LIFECYCLE] (27) WorldSubsystem::Initialize
-Log          LogLifecycle              [LIFECYCLE] (28) TickableWorldSubsystem::ShouldCreateSubsystem
-Log          LogLifecycle              [LIFECYCLE] (29) TickableWorldSubsystem::Initialize
-Log          LogLifecycle              [LIFECYCLE] (30) WorldSubsystem::PostInitialize
-Log          LogLifecycle              [LIFECYCLE] (31) TickableWorldSubsystem::PostInitialize
-Log          LogLifecycle              [LIFECYCLE] (32) UActorComponent::OnRegister
-Log          LogLifecycle              [LIFECYCLE] (33) WorldSubsystem::OnWorldComponentsUpdated
-Log          LogLifecycle              [LIFECYCLE] (34) TickableWorldSubsystem::OnWorldComponentsUpdated
-Log          LogLifecycle              [LIFECYCLE] (35) GameMode::InitGame
-Log          LogLifecycle              [LIFECYCLE] (36) GameMode::InitGameState
-Log          LogLifecycle              [LIFECYCLE] (37) UActorComponent::Activate
-Log          LogLifecycle              [LIFECYCLE] (38) GameMode::PostInitializeComponents
-Log          LogLifecycle              [LIFECYCLE] (39) GameMode::PostLogin
-Log          LogLifecycle              [LIFECYCLE] (40) WorldSubsystem::OnWorldBeginPlay
-Log          LogLifecycle              [LIFECYCLE] (41) TickableWorldSubsystem::OnWorldBeginPlay
-Log          LogLifecycle              [LIFECYCLE] (42) Actor::BeginPlay
-Log          LogLifecycle              [LIFECYCLE] (43) UActorComponent::BeginPlay
-Log          LogLifecycle              [LIFECYCLE] (44) GameMode::BeginPlay
-Log          LogLifecycle              [LIFECYCLE] (45) Actor::Tick
-Log          LogLifecycle              [LIFECYCLE] (46) UActorComponent::TickComponent
-Log          LogLifecycle              [LIFECYCLE] (47) TickableWorldSubsystem::Tick
-Log          LogLifecycle              [LIFECYCLE] (48) -=-=-=-=-=- EndPIE -=-=-=-=-=-
-Log          LogLifecycle              [LIFECYCLE] (49) GameMode::EndPlay
-Log          LogLifecycle              [LIFECYCLE] (50) UActorComponent::OnUnregister
-Log          LogLifecycle              [LIFECYCLE] (51) WorldSubsystem::Deinitialize
-Log          LogLifecycle              [LIFECYCLE] (52) TickableWorldSubsystem::Deinitialize
-Log          LogLifecycle              [LIFECYCLE] (53) TickableWorldSubsystem::BeginDestroy
-Log          LogLifecycle              [LIFECYCLE] (54) WorldSubsystem::BeginDestroy
-Log          LogLifecycle              [LIFECYCLE] (55) UActorComponent::BeginDestroy
+(26) -=-=-=-=-=- BeginPIE -=-=-=-=-=-
+(27) WorldSubsystem::ShouldCreateSubsystem
+(28) WorldSubsystem::Initialize
+(29) TickableWorldSubsystem::ShouldCreateSubsystem
+(30) TickableWorldSubsystem::Initialize
+(31) WorldSubsystem::PostInitialize
+(32) TickableWorldSubsystem::PostInitialize
+(33) UGameViewportClient::PostInitProperties
+(34) UGameViewportClient::Init
+(35) UGameViewportClient::Activated
+(36) UActorComponent::OnRegister
+(37) WorldSubsystem::OnWorldComponentsUpdated
+(38) TickableWorldSubsystem::OnWorldComponentsUpdated
+(39) GameMode::InitGame
+(40) AGameSession::InitOptions
+(41) AGameState::PostInitializeComponents
+(42) GameMode::InitGameState
+(43) AGameState::ReceivedGameModeClass
+(44) UActorComponent::Activate
+(45) Actor::PostInitializeComponents
+(46) GameMode::PostInitializeComponents
+(47) APlayerController::PostInitializeComponents
+(48) APlayerState::PostInitializeComponents
+(49) GameMode::PostLogin
+(50) AGameSession::PostLogin
+(51) APawn::PostInitializeComponents
+(52) APlayerController::BeginPlayingState
+(53) WorldSubsystem::OnWorldBeginPlay
+(54) TickableWorldSubsystem::OnWorldBeginPlay
+(55) AGameState::HandleBeginPlay
+(56) UGameViewportClient::Activated
+(57) APlayerController::Tick
+(58) TickableWorldSubsystem::Tick
+(59) UGameViewportClient::Tick
+(60) AHUD::DrawHUD
+(61) -=-=-=-=-=- EndPIE -=-=-=-=-=-
+(62) APlayerState::Destroyed
+(63) UActorComponent::OnUnregister
+(64) WorldSubsystem::Deinitialize
+(65) TickableWorldSubsystem::Deinitialize
+(66) UGameViewportClient::BeginDestroy
+(67) TickableWorldSubsystem::BeginDestroy
+(68) WorldSubsystem::BeginDestroy
+(69) UActorComponent::BeginDestroy
+
 ```

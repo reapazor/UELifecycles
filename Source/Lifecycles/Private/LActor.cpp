@@ -20,6 +20,18 @@ void ALActor::BeginPlay()
 	Super::BeginPlay();
 }
 
+void ALActor::EndPlay(const EEndPlayReason::Type EndPlayReason)
+{
+	FLUtils::Log(TEXT("Actor"), TEXT("EndPlay"));
+	Super::EndPlay(EndPlayReason);
+}
+
+void ALActor::PostInitializeComponents()
+{
+	FLUtils::Log(TEXT("Actor"), TEXT("PostInitializeComponents"));
+	Super::PostInitializeComponents();
+}
+
 void ALActor::Tick(float DeltaTime)
 {
 	if (!bTicked)
