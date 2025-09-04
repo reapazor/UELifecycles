@@ -1,49 +1,69 @@
 A super quick little project to validate the lifecycle events in Unreal Engine.
 
 ```
-(26) -=-=-=-=-=- BeginPIE -=-=-=-=-=-
-(27) UWorldSubsystem::ShouldCreateSubsystem
-(28) UWorldSubsystem::Initialize
-(29) UTickableWorldSubsystem::ShouldCreateSubsystem
-(30) UTickableWorldSubsystem::Initialize
-(31) UWorldSubsystem::PostInitialize
-(32) UTickableWorldSubsystem::PostInitialize
-(33) UGameViewportClient::PostInitProperties
-(34) UGameViewportClient::Init
-(35) UGameViewportClient::Activated
-(36) UActorComponent::OnRegister
-(37) UWorldSubsystem::OnWorldComponentsUpdated
-(38) UTickableWorldSubsystem::OnWorldComponentsUpdated
-(39) AGameMode::InitGame
-(40) AGameSession::InitOptions
-(41) AGameState::PostInitializeComponents
-(42) AGameMode::InitGameState
-(43) AGameState::ReceivedGameModeClass
-(44) UActorComponent::Activate
-(45) AActor::PostInitializeComponents
-(46) AGameMode::PostInitializeComponents
-(47) APlayerController::PostInitializeComponents
-(48) APlayerState::PostInitializeComponents
-(49) AGameMode::PostLogin
-(50) AGameSession::PostLogin
-(51) APawn::PostInitializeComponents
-(52) APlayerController::BeginPlayingState
-(53) UWorldSubsystem::OnWorldBeginPlay
-(54) UTickableWorldSubsystem::OnWorldBeginPlay
-(55) AGameState::HandleBeginPlay
+(20) -=-=-=-=-=- BeginPIE -=-=-=-=-=-
+(21) UWorldSubsystem::ShouldCreateSubsystem
+(22) UWorldSubsystem::Initialize
+(23) UTickableWorldSubsystem::ShouldCreateSubsystem
+(24) UTickableWorldSubsystem::Initialize
+(25) UWorldSubsystem::PostInitialize
+(26) UTickableWorldSubsystem::PostInitialize
+(27) UGameViewportClient::PostInitProperties
+(28) UGameViewportClient::Init
+(29) UGameViewportClient::Activated
+(30) UActorComponent::OnRegister
+(31) UWorldSubsystem::OnWorldComponentsUpdated
+(32) UTickableWorldSubsystem::OnWorldComponentsUpdated
+(33) AGameMode::InitGame
+(34) AGameSession::InitOptions
+(35) AGameState::PostInitializeComponents
+(36) AGameMode::InitGameState
+(37) AGameState::ReceivedGameModeClass
+(38) UActorComponent::Activate
+(39) AActor::PostInitializeComponents
+(40) AGameMode::PostInitializeComponents
+(41) APlayerController::PostInitializeComponents
+(42) APlayerState::PostInitializeComponents
+(43) AGameMode::PostLogin
+(44) AGameSession::PostLogin
+(45) UWorldSubsystem::OnWorldBeginPlay
+(46) UTickableWorldSubsystem::OnWorldBeginPlay
+(47) APawn::PostInitializeComponents
+(48) APlayerController::BeginPlayingState
+(49) AActor::BeginPlay
+(50) UActorComponent::BeginPlay
+(51) AGameMode::BeginPlay
+(52) ULevelBlueprint::Event BeginPlay
+(53) APlayerController::BeginPlay
+(54) APlayerState::BeginPlay
+(55) APawn::BeginPlay
 (56) UGameViewportClient::Activated
-(57) APlayerController::Tick
-(58) UTickableWorldSubsystem::Tick
-(59) UGameViewportClient::Tick
-(60) AHUD::DrawHUD
-(61) -=-=-=-=-=- EndPIE -=-=-=-=-=-
-(62) APlayerState::Destroyed
-(63) UActorComponent::OnUnregister
-(64) UWorldSubsystem::Deinitialize
-(65) UTickableWorldSubsystem::Deinitialize
-(66) UGameViewportClient::BeginDestroy
-(67) UTickableWorldSubsystem::BeginDestroy
-(68) UWorldSubsystem::BeginDestroy
-(69) UActorComponent::BeginDestroy
-
+(57) AGameMode::Tick
+(58) APlayerController::Tick
+(59) AActor::Tick
+(60) ULevelBlueprint::Event Tick
+(61) APawn::Tick
+(62) UActorComponent::TickComponent
+(63) AHUD::Tick
+(64) UTickableWorldSubsystem::Tick
+(65) UGameViewportClient::Tick
+(66) AHUD::DrawHUD
+(67) -=-=-=-=-=- EndPIE -=-=-=-=-=-
+(68) APlayerState::PostInitializeComponents
+(69) APlayerState::BeginPlay
+(70) APlayerState::Destroyed
+(71) APlayerState::EndPlay
+(72) APlayerController::EndPlay
+(73) AActor::EndPlay
+(74) AGameMode::EndPlay
+(75) ULevelBlueprint::Event End Play
+(76) APawn::EndPlay
+(77) APlayerState::EndPlay
+(78) UActorComponent::OnUnregister
+(79) UWorldSubsystem::Deinitialize
+(80) UTickableWorldSubsystem::Deinitialize
+(81) UGameViewportClient::BeginDestroy
+(82) UTickableWorldSubsystem::BeginDestroy
+(83) UWorldSubsystem::BeginDestroy
+(84) UActorComponent::BeginDestroy
 ```

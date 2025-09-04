@@ -4,11 +4,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/GameModeBase.h"
+#include "GameFramework/GameMode.h"
 #include "LGameMode.generated.h"
 
 UCLASS()
-class LIFECYCLES_API ALGameMode : public AGameModeBase
+class LIFECYCLES_API ALGameMode : public AGameMode
 {
 	GENERATED_BODY()
 
